@@ -1,0 +1,41 @@
+git_integration_task:
+  description: >
+    Based on all generated code and the evaluation report, prepare a
+    complete Git integration plan:
+
+    1. Branch name (e.g., feature/attendance-module)
+    2. File structure - organized directory tree of all generated files
+    3. Commit plan - logical commits with meaningful messages
+    4. Pull Request title and description
+    5. Summary of all changes for reviewers
+
+    The PR description should reference the original idea, list all
+    implemented features, and include the evaluation scores.
+
+    === PROJECT IDEA ===
+    {project_idea}
+    === END PROJECT IDEA ===
+
+    === EVALUATION REPORT ===
+    {evaluation_content}
+    === END EVALUATION REPORT ===
+
+    === BACKEND CODE ===
+    {backend_content}
+    === END BACKEND CODE ===
+
+    === FRONTEND CODE ===
+    {frontend_content}
+    === END FRONTEND CODE ===
+
+    === DATABASE SCHEMA ===
+    {database_content}
+    === END DATABASE SCHEMA ===
+  expected_output: >
+    A complete Git integration document with:
+    1. Branch name
+    2. Directory tree showing all files
+    3. Ordered list of commits with messages
+    4. Full Pull Request title and detailed description in markdown
+    The PR description should be comprehensive enough for a code reviewer.
+  agent: git_integration_agent

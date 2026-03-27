@@ -1,0 +1,22 @@
+architecture_task:
+  description: >
+    Based on the following SRS document, design a complete technical system
+    architecture. Include:
+
+    1. Architecture Style (e.g., Modular Monolith, Microservices)
+    2. Services - list all services/modules with their responsibilities
+    3. Database Tables - list all tables with key columns
+    4. Technology Stack - frontend, backend, database, deployment tools
+    5. API Design - detailed endpoint specifications
+
+    Make practical technology choices suitable for the project scope.
+
+    === SRS DOCUMENT ===
+    {srs_content}
+    === END SRS ===
+  expected_output: >
+    A structured architecture document in markdown with sections for:
+    Architecture Style, Services, Database Tables (with column details),
+    Technology Stack, and API Design. Should be detailed enough for
+    developers to implement directly.
+  agent: architecture_agent

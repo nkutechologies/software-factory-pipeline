@@ -1,0 +1,22 @@
+planning_task:
+  description: >
+    Based on the architecture document below, create a detailed task breakdown
+    as a JSON task list. Each task must specify:
+    - id: task identifier (T1, T2, etc.)
+    - agent: which specialist agent handles it (database_engineer,
+      backend_developer, frontend_developer, qa_engineer)
+    - task: clear description of what to implement
+    - depends_on: list of task IDs this depends on (empty array if none)
+
+    Order tasks by dependency - database first, then backend, then frontend,
+    then QA tests.
+
+    === ARCHITECTURE DOCUMENT ===
+    {architecture_content}
+    === END ARCHITECTURE ===
+  expected_output: >
+    A valid JSON object with a "tasks" array. Each task has id, agent, task
+    description, and depends_on fields. Tasks should be ordered logically
+    with database tasks first, then backend APIs, then frontend UI, then tests.
+    Format as a clean JSON code block.
+  agent: planning_agent

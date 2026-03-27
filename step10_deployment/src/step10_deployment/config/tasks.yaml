@@ -1,0 +1,47 @@
+deployment_task:
+  description: >
+    You MUST actually deploy the generated application using your tools.
+    Do NOT just write documentation. Use file_writer and shell_command tools.
+
+    Follow these steps IN ORDER:
+
+    STEP 1 - CREATE FULL-STACK PROJECT:
+    Use file_writer to create a complete project at the deploy directory that
+    combines backend API and frontend into a single deployable app:
+
+    a) Create package.json with express, pg, cors, dotenv dependencies
+    b) Create server.js with Express server serving API routes and static files
+    c) Create public/index.html with a complete single-page HTML app
+    d) Create vercel.json for Vercel deployment config
+
+    Use the backend and frontend code provided as reference:
+
+    === BACKEND CODE ===
+    {backend_content}
+    === END BACKEND CODE ===
+
+    === FRONTEND CODE ===
+    {frontend_content}
+    === END FRONTEND CODE ===
+
+    STEP 2 - INSTALL DEPENDENCIES:
+    Use shell_command: cd output/deploy && npm install
+
+    STEP 3 - INITIALIZE GIT:
+    Use shell_command: cd output/deploy && git init && git add -A && git commit -m "Initial deploy"
+
+    STEP 4 - DEPLOY TO VERCEL:
+    Use shell_command: cd output/deploy && npx vercel deploy --prod --yes --token=$VERCEL_TOKEN
+
+    STEP 5 - VERIFY:
+    Use shell_command: ls -la output/deploy/
+
+    Your final answer MUST include the deployed URL.
+  expected_output: >
+    A deployment report containing:
+    1. DEPLOYED_URL: The live Vercel URL
+    2. Complete file tree of output/deploy/
+    3. Status of each deployment step (success/failure)
+    4. Environment variables needed for production
+    The DEPLOYED_URL must be clearly labeled on its own line.
+  agent: deployment_agent

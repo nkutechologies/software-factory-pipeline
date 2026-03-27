@@ -1,0 +1,31 @@
+frontend_task:
+  description: >
+    Based on the architecture, task plan, and API endpoints below, generate
+    production-ready React frontend code including:
+    1. Main App component with routing
+    2. Page components for each major feature
+    3. Form components with proper state management
+    4. API integration using fetch or axios
+    5. Basic responsive styling
+
+    Follow React best practices with functional components and hooks.
+
+    === ARCHITECTURE DOCUMENT ===
+    {architecture_content}
+    === END ARCHITECTURE ===
+
+    === TASK PLAN ===
+    {task_plan_content}
+    === END TASK PLAN ===
+
+    === BACKEND API CODE ===
+    {backend_content}
+    === END BACKEND API ===
+  expected_output: >
+    Complete React component files in clearly labeled code blocks:
+    1. App.jsx - Main app with routing
+    2. Feature page components
+    3. Reusable form/UI components
+    4. API service file for backend communication
+    All code should use functional components, hooks, and clean patterns.
+  agent: frontend_developer

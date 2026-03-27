@@ -1,0 +1,29 @@
+qa_task:
+  description: >
+    Based on ALL the generated code below (database, backend, frontend),
+    generate comprehensive test suites:
+    1. API integration tests for every endpoint (happy path + error cases)
+    2. Unit tests for controller/business logic functions
+    3. Frontend component tests
+    4. Test data setup and teardown
+
+    Cover both success and failure scenarios. Include edge cases.
+
+    === DATABASE SCHEMA ===
+    {database_content}
+    === END DATABASE SCHEMA ===
+
+    === BACKEND CODE ===
+    {backend_content}
+    === END BACKEND CODE ===
+
+    === FRONTEND CODE ===
+    {frontend_content}
+    === END FRONTEND CODE ===
+  expected_output: >
+    Complete test files in clearly labeled code blocks:
+    1. API test suite (e.g., using Jest/Supertest)
+    2. Unit test suite for business logic
+    3. Frontend component tests
+    Each test should have clear descriptions and assertions.
+  agent: qa_engineer

@@ -1,0 +1,43 @@
+evaluation_task:
+  description: >
+    Review ALL generated artifacts below and produce a quality evaluation
+    report. Score each dimension 1-10:
+
+    1. Code Quality - clean code, best practices, naming conventions
+    2. Test Coverage - are all endpoints and features tested?
+    3. Security Score - SQL injection prevention, input validation, auth
+    4. Architecture Compliance - does code follow the architecture?
+    5. Completeness - are all requirements from the SRS implemented?
+
+    For each dimension, provide the score and specific findings.
+    If any score is below 7, list specific issues that need fixing.
+
+    === SRS DOCUMENT ===
+    {srs_content}
+    === END SRS ===
+
+    === ARCHITECTURE ===
+    {architecture_content}
+    === END ARCHITECTURE ===
+
+    === DATABASE SCHEMA ===
+    {database_content}
+    === END DATABASE SCHEMA ===
+
+    === BACKEND CODE ===
+    {backend_content}
+    === END BACKEND CODE ===
+
+    === FRONTEND CODE ===
+    {frontend_content}
+    === END FRONTEND CODE ===
+
+    === TEST SUITES ===
+    {tests_content}
+    === END TEST SUITES ===
+  expected_output: >
+    A JSON evaluation report with scores and findings for each dimension:
+    code_quality, test_coverage, security_score, architecture_compliance,
+    completeness. Each with a numeric score (1-10) and array of findings.
+    Include an overall_score average and a pass/fail recommendation.
+  agent: evaluation_engine

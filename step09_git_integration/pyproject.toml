@@ -1,0 +1,18 @@
+[project]
+name = "step09_git_integration"
+version = "0.1.0"
+description = "Step 09 - Git Integration: Prepare PR and commit plan"
+authors = [{ name = "NKU Technologies", email = "dev@nkutechologies.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = ["crewai[tools]==1.11.1"]
+
+[project.scripts]
+step09_git_integration = "step09_git_integration.main:run"
+run_crew = "step09_git_integration.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

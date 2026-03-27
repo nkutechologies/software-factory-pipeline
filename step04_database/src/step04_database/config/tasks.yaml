@@ -1,0 +1,25 @@
+database_task:
+  description: >
+    Based on the architecture and task plan below, generate production-ready
+    PostgreSQL SQL scripts including:
+    1. CREATE TABLE statements with proper data types
+    2. Primary keys and foreign key constraints
+    3. Indexes for frequently queried columns
+    4. NOT NULL and DEFAULT constraints where appropriate
+    5. A seed data script with sample records for testing
+
+    Follow PostgreSQL best practices and naming conventions.
+
+    === ARCHITECTURE DOCUMENT ===
+    {architecture_content}
+    === END ARCHITECTURE ===
+
+    === TASK PLAN ===
+    {task_plan_content}
+    === END TASK PLAN ===
+  expected_output: >
+    Complete SQL scripts in code blocks:
+    1. A schema creation script with all CREATE TABLE statements
+    2. A seed data script with INSERT statements for testing
+    All tables should have proper constraints, indexes, and relationships.
+  agent: database_engineer

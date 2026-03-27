@@ -1,0 +1,18 @@
+[project]
+name = "step10_deployment"
+version = "0.1.0"
+description = "Step 10 - Deployment: Deploy app to Vercel with real tools"
+authors = [{ name = "NKU Technologies", email = "dev@nkutechologies.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = ["crewai[tools]==1.11.1"]
+
+[project.scripts]
+step10_deployment = "step10_deployment.main:run"
+run_crew = "step10_deployment.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,32 @@
+backend_task:
+  description: >
+    Based on the architecture, task plan, and database schema below, generate
+    production-ready Node.js/Express backend code including:
+    1. Express server setup with middleware
+    2. Route definitions for all API endpoints
+    3. Controller functions with database queries
+    4. Input validation and error handling
+    5. Database connection configuration
+
+    Use parameterized queries to prevent SQL injection.
+    Include proper HTTP status codes and error responses.
+
+    === ARCHITECTURE DOCUMENT ===
+    {architecture_content}
+    === END ARCHITECTURE ===
+
+    === TASK PLAN ===
+    {task_plan_content}
+    === END TASK PLAN ===
+
+    === DATABASE SCHEMA ===
+    {database_content}
+    === END DATABASE SCHEMA ===
+  expected_output: >
+    Complete backend code files in clearly labeled code blocks:
+    1. server.js - Express server setup
+    2. routes/ files - API route definitions
+    3. controllers/ files - Business logic
+    4. db.js - Database connection setup
+    All code should be clean, well-commented, and production-ready.
+  agent: backend_developer
