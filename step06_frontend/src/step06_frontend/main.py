@@ -40,9 +40,10 @@ def run():
 
     while True:
         print("\n🚀 Running frontend development...\n")
-        Step06Frontend().crew().kickoff(inputs=inputs)
+        result = Step06Frontend().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "06_frontend.md"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 06 Complete!")
         print(f"   Frontend Code: {output_path}")

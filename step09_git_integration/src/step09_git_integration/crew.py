@@ -18,7 +18,6 @@ class Step09GitIntegration():
     def git_integration_task(self) -> Task:
         return Task(
             config=self.tasks_config['git_integration_task'],
-            output_file='../pipeline_data/09_pull_request.md'
         )
 
     @crew

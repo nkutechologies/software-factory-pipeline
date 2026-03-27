@@ -18,7 +18,6 @@ class Step04Database():
     def database_task(self) -> Task:
         return Task(
             config=self.tasks_config['database_task'],
-            output_file='../pipeline_data/04_database.sql'
         )
 
     @crew

@@ -18,7 +18,6 @@ class Step01Requirements():
     def requirement_task(self) -> Task:
         return Task(
             config=self.tasks_config['requirement_task'],
-            output_file='../pipeline_data/01_srs.md'
         )
 
     @crew

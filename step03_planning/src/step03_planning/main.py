@@ -29,9 +29,10 @@ def run():
 
     while True:
         print("\n🚀 Running task planning...\n")
-        Step03Planning().crew().kickoff(inputs=inputs)
+        result = Step03Planning().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "03_task_plan.json"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 03 Complete!")
         print(f"   Task Plan: {output_path}")

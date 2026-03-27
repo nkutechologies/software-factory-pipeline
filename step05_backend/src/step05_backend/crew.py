@@ -18,7 +18,6 @@ class Step05Backend():
     def backend_task(self) -> Task:
         return Task(
             config=self.tasks_config['backend_task'],
-            output_file='../pipeline_data/05_backend.md'
         )
 
     @crew

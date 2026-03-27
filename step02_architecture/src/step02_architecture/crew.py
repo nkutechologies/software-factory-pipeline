@@ -18,7 +18,6 @@ class Step02Architecture():
     def architecture_task(self) -> Task:
         return Task(
             config=self.tasks_config['architecture_task'],
-            output_file='../pipeline_data/02_architecture.md'
         )
 
     @crew

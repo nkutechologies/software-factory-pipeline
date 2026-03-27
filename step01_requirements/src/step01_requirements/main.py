@@ -118,10 +118,13 @@ def run():
 
     while True:
         print("\n🚀 Running requirements analysis...\n")
-        Step01Requirements().crew().kickoff(inputs=inputs)
+        result = Step01Requirements().crew().kickoff(inputs=inputs)
+
+        # Write output to pipeline_data
+        srs_md = PIPELINE_DATA / "01_srs.md"
+        srs_md.write_text(str(result), encoding="utf-8")
 
         # Generate Word document
-        srs_md = PIPELINE_DATA / "01_srs.md"
         srs_docx = PIPELINE_DATA / "01_srs.docx"
         if srs_md.exists():
             markdown_to_docx(str(srs_md), str(srs_docx))

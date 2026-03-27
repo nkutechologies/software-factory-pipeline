@@ -18,7 +18,6 @@ class Step03Planning():
     def planning_task(self) -> Task:
         return Task(
             config=self.tasks_config['planning_task'],
-            output_file='../pipeline_data/03_task_plan.json'
         )
 
     @crew

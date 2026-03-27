@@ -18,7 +18,6 @@ class Step08Evaluation():
     def evaluation_task(self) -> Task:
         return Task(
             config=self.tasks_config['evaluation_task'],
-            output_file='../pipeline_data/08_evaluation.json'
         )
 
     @crew

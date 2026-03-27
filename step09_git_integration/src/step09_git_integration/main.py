@@ -40,9 +40,10 @@ def run():
 
     while True:
         print("\n🚀 Running Git integration planning...\n")
-        Step09GitIntegration().crew().kickoff(inputs=inputs)
+        result = Step09GitIntegration().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "09_pull_request.md"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 09 Complete!")
         print(f"   PR Plan: {output_path}")

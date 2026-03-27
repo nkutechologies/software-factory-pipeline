@@ -23,7 +23,6 @@ class Step10Deployment():
     def deployment_task(self) -> Task:
         return Task(
             config=self.tasks_config['deployment_task'],
-            output_file='../pipeline_data/10_deployment.md'
         )
 
     @crew

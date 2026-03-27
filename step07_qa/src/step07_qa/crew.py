@@ -18,7 +18,6 @@ class Step07Qa():
     def qa_task(self) -> Task:
         return Task(
             config=self.tasks_config['qa_task'],
-            output_file='../pipeline_data/07_tests.md'
         )
 
     @crew

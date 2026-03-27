@@ -40,9 +40,10 @@ def run():
 
     while True:
         print("\n🚀 Running QA engineering...\n")
-        Step07Qa().crew().kickoff(inputs=inputs)
+        result = Step07Qa().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "07_tests.md"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 07 Complete!")
         print(f"   Test Suites: {output_path}")

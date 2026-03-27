@@ -42,9 +42,10 @@ def run():
 
     while True:
         print("\n🚀 Running code evaluation...\n")
-        Step08Evaluation().crew().kickoff(inputs=inputs)
+        result = Step08Evaluation().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "08_evaluation.json"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 08 Complete!")
         print(f"   Evaluation Report: {output_path}")

@@ -18,7 +18,6 @@ class Step06Frontend():
     def frontend_task(self) -> Task:
         return Task(
             config=self.tasks_config['frontend_task'],
-            output_file='../pipeline_data/06_frontend.md'
         )
 
     @crew

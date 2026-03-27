@@ -38,6 +38,7 @@ def run():
         result = Step10Deployment().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "10_deployment.md"
+        output_path.write_text(str(result), encoding="utf-8")
 
         # Extract deployed URL
         raw_output = str(result)

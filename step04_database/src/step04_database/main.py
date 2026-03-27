@@ -37,9 +37,10 @@ def run():
 
     while True:
         print("\n🚀 Running database engineering...\n")
-        Step04Database().crew().kickoff(inputs=inputs)
+        result = Step04Database().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "04_database.sql"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 04 Complete!")
         print(f"   Database Schema: {output_path}")

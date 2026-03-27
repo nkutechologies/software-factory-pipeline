@@ -29,9 +29,10 @@ def run():
 
     while True:
         print("\n🚀 Running architecture design...\n")
-        Step02Architecture().crew().kickoff(inputs=inputs)
+        result = Step02Architecture().crew().kickoff(inputs=inputs)
 
         output_path = PIPELINE_DATA / "02_architecture.md"
+        output_path.write_text(str(result), encoding="utf-8")
         print("\n" + "=" * 60)
         print("✅ Step 02 Complete!")
         print(f"   Architecture: {output_path}")
